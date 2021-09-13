@@ -35,7 +35,7 @@ body {
 /*         HEADER       */
 /* ******************** */
 
-header {
+body > header {
   display: grid;
   grid-template: "logo . navbar register" 8rem / auto 1fr auto auto;
   justify-items: center;
@@ -44,7 +44,7 @@ header {
 
 /* logo */
 
-header img {
+body > header img {
   grid-area: logo;
   height: 3rem;
   width: 100%;
@@ -209,6 +209,14 @@ header > a {
   padding-top: 2rem;
 }
 
+.hostings i[data-active="true"] {
+  color: var(--blue);
+}
+
+.hostings i[data-active="false"] {
+  color: var(--gray);
+}
+
 /* ******************** */
 /*     HOSTINGS-MAIN    */
 /* ******************** */
@@ -223,9 +231,8 @@ header > a {
   border-radius: 2rem;
 }
 
-.hosting-main h2 {
+.hosting-main header {
   grid-column: 1/-1;
-  font-size: 1.7rem;
 }
 
 .hosting-main a:last-child {
@@ -264,14 +271,6 @@ header > a {
   font-weight: 700;
 }
 
-.hosting-main-card i[data-active="true"] {
-  color: var(--blue);
-}
-
-.hosting-main-card i[data-active="false"] {
-  color: var(--gray);
-}
-
 /* ******************** */
 /*         ASIDE        */
 /* ******************** */
@@ -279,4 +278,50 @@ header > a {
 aside {
   background-color: var(--gray-light);
   border-radius: 2rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  row-gap: 3rem;
+  /* grid-auto-rows: 1fr */
+}
+
+aside header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+aside header i {
+  font-size: 1.6rem;
+}
+.aside-card {
+  display: flex;
+  align-content: stretch;
+  background-color: white;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 5px var(--gray);
+  padding: 0.4rem;
+}
+
+.aside-img {
+  position: relative;
+  min-height: 100%;
+  min-width: 33%;
+}
+
+.aside-img img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.aside-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.4rem;
+  padding: 0.5rem 0 0 1rem;
 }
