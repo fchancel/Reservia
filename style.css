@@ -1,0 +1,282 @@
+/* ******************** */
+/*         GENERAL      */
+/* ******************** */
+
+:root {
+  --blue: #0065fc;
+  --blue-light: #deebff;
+  --gray: #d9d9d9;
+  --gray-light: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+a {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  /* max-width: 1400px; */
+  /* margin: auto; */
+  margin: 0 4rem 0 4rem;
+}
+
+/* ******************** */
+/*         HEADER       */
+/* ******************** */
+
+header {
+  display: grid;
+  grid-template: "logo . navbar register" 8rem / auto 1fr auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+/* logo */
+
+header img {
+  grid-area: logo;
+  height: 3rem;
+  width: 100%;
+}
+
+/* nav */
+
+header nav {
+  grid-area: navbar;
+}
+
+header nav a {
+  padding: 0rem 2rem 0 2rem;
+}
+
+header nav a:hover {
+  color: var(--blue);
+  padding-top: 3.2rem;
+  border-top: 3px solid var(--blue);
+}
+
+/* register */
+
+header > a {
+  grid-area: register;
+  color: var(--blue);
+  font-weight: 700;
+  padding-left: 2rem;
+}
+
+/* ******************** */
+/*         SEARCH       */
+/* ******************** */
+
+.search {
+  line-height: 2rem;
+}
+
+/* form */
+
+.search form {
+  display: flex;
+  padding-top: 1rem;
+}
+
+.search form i {
+  background-color: var(--gray-light);
+  padding: 1rem;
+  border-radius: 1rem 0 0 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.search form input {
+  padding: 1rem;
+  border: 1px solid var(--gray-light);
+  color: black;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.search form button {
+  font-size: 1.1rem;
+  background-color: var(--blue);
+  color: white;
+  border: 0;
+  border-radius: 0 1rem 1rem 0;
+  font-weight: 700;
+  padding: 0 1rem 0 1rem;
+  cursor: pointer;
+}
+
+.search form button:hover {
+  background-color: white;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+/* filters */
+
+.option-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.option-filter div {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--gray);
+  border-left: 0 solid;
+  border-radius: 6rem;
+}
+
+.option-filter div:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+.option-filter i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  margin: -2px;
+  border-radius: 50%;
+  background-color: var(--blue-light);
+  color: var(--blue);
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 2rem;
+}
+
+.option-filter p {
+  font-weight: 700;
+  padding: 0 1rem 0 0;
+}
+
+.option-filter div p {
+  padding: 0 1rem 0 1rem;
+}
+
+/* info */
+
+.option-info {
+  display: flex;
+  align-content: center;
+  padding-top: 2rem;
+}
+
+.option-info i {
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--gray);
+  border-radius: 50%;
+  color: var(--blue);
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+}
+
+.option-info p {
+  margin-left: 0.7rem;
+}
+
+/* ******************** */
+/*        HOSTINGS      */
+/* ******************** */
+
+.hostings {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  column-gap: 4rem;
+  padding-top: 2rem;
+}
+
+/* ******************** */
+/*     HOSTINGS-MAIN    */
+/* ******************** */
+
+.hosting-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  row-gap: 3rem;
+  background-color: var(--gray-light);
+  padding: 3rem 3rem 3rem 3rem;
+  border-radius: 2rem;
+}
+
+.hosting-main h2 {
+  grid-column: 1/-1;
+  font-size: 1.7rem;
+}
+
+.hosting-main a:last-child {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* hosting card */
+
+.hosting-main-card {
+  background-color: white;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 5px var(--gray);
+  padding: 0.4rem;
+  line-height: 1.6rem;
+}
+
+.hosting-main-card:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+.hosting-main-card img {
+  height: 9rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.hosting-main-text {
+  padding-left: 1rem;
+}
+
+.hosting-main-text span {
+  font-weight: 700;
+}
+
+.hosting-main-card i[data-active="true"] {
+  color: var(--blue);
+}
+
+.hosting-main-card i[data-active="false"] {
+  color: var(--gray);
+}
+
+/* ******************** */
+/*         ASIDE        */
+/* ******************** */
+
+aside {
+  background-color: var(--gray-light);
+  border-radius: 2rem;
+}
