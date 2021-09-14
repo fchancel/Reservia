@@ -25,8 +25,8 @@ a {
   text-decoration: none;
 }
 
-body {
-  margin: 0 4rem 0 4rem;
+li {
+  list-style: none;
 }
 
 /* ******************** */
@@ -38,6 +38,7 @@ body > header {
   grid-template: "logo . navbar register" 8rem / auto 1fr auto auto;
   justify-items: center;
   align-items: center;
+  margin: 0 4rem 0 4rem;
 }
 
 /* logo */
@@ -199,6 +200,10 @@ header > a {
 /* ******************** */
 /*        HOSTINGS      */
 /* ******************** */
+
+main {
+  margin: 0 4rem 0 4rem;
+}
 
 .hostings {
   display: grid;
@@ -400,4 +405,25 @@ aside header i {
 .activities a:hover {
   transition: 0.5s;
   transform: scale(1.05);
+}
+
+/* ******************** */
+/*        FOOTER        */
+/* ******************** */
+
+footer {
+  background-color: var(--gray-light);
+  display: flex;
+  margin: auto;
+  padding: 4rem;
+}
+
+footer div {
+  width: 30%;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+footer div h3{
+  padding-bottom: 1rem;
 }
