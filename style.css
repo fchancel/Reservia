@@ -33,16 +33,22 @@ li {
 /*         HEADER       */
 /* ******************** */
 
-body > header {
-  display: grid;
-  grid-template: "logo . navbar register" 8rem / auto 1fr auto auto;
-  justify-items: center;
-  align-items: center;
-  margin: 0 4rem 0 4rem;
+@media screen and (min-width: 768px) {
+  body > header {
+    display: grid;
+    grid-template: "logo . navbar register" 8rem / auto 1fr auto auto;
+    justify-items: center;
+    align-items: center;
+    margin: 0 4rem 0 4rem;
+  }
+  header nav a:hover {
+    color: var(--blue);
+    padding-top: 3.2rem;
+    border-top: 3px solid var(--blue);
+  }
 }
 
 /* logo */
-
 body > header img {
   grid-area: logo;
   height: 3rem;
@@ -57,12 +63,6 @@ header nav {
 
 header nav a {
   padding: 0rem 2rem 0 2rem;
-}
-
-header nav a:hover {
-  color: var(--blue);
-  padding-top: 3.2rem;
-  border-top: 3px solid var(--blue);
 }
 
 /* register */
@@ -89,7 +89,7 @@ header > a {
   padding-top: 1rem;
 }
 
-.search form i {
+.search form > i {
   background-color: var(--gray-light);
   padding: 1rem;
   border-radius: 1rem 0 0 1rem;
@@ -118,10 +118,13 @@ header > a {
   cursor: pointer;
 }
 
-.search form button:hover {
-  background-color: white;
-  color: var(--blue);
-  border: 2px solid var(--blue);
+.search form button span {
+  display: inline;
+}
+.search form button i {
+  background-color: var(--blue);
+  color: white;
+  display: None;
 }
 
 /* filters */
@@ -205,18 +208,18 @@ main {
   margin: 0 4rem 0 4rem;
 }
 
-.hostings {
+#hostings {
   display: grid;
   grid-template-columns: 4fr 2fr;
   column-gap: 4rem;
   padding-top: 2rem;
 }
 
-.hostings i[data-active="true"] {
+#hostings i[data-active="true"] {
   color: var(--blue);
 }
 
-.hostings i[data-active="false"] {
+#hostings i[data-active="false"] {
   color: var(--gray);
 }
 
@@ -227,10 +230,10 @@ main {
 .hosting-main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 3rem;
-  row-gap: 3rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
   background-color: var(--gray-light);
-  padding: 3rem 3rem 3rem 3rem;
+  padding: 2rem 2rem 2rem 2rem;
   border-radius: 2rem;
 }
 
@@ -267,7 +270,7 @@ main {
 }
 
 .hosting-main-text {
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 
 .hosting-main-text span {
@@ -281,10 +284,10 @@ main {
 aside {
   background-color: var(--gray-light);
   border-radius: 2rem;
-  padding: 3rem;
+  padding: 2rem;
   display: grid;
   grid-template-rows: auto 1fr 1fr 1fr;
-  row-gap: 3rem;
+  row-gap: 2rem;
 }
 
 aside header {
@@ -304,6 +307,11 @@ aside header i {
   border-radius: 1rem;
   box-shadow: 0 0 10px 5px var(--gray);
   padding: 0.4rem;
+}
+
+.aside-card:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
 }
 
 .aside-img {
@@ -332,21 +340,18 @@ aside header i {
 /*        ACTIVIES      */
 /* ******************** */
 
-.activities {
+#activities {
   display: grid;
   grid-template-rows: auto 5rem 5rem 5rem 5rem 5rem;
-  column-gap: 3rem;
-  row-gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
 
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-.activities header {
-  grid-column: 1 / -1;
-}
-
-.activities a {
+#activities a {
   border-radius: 1rem;
   box-shadow: 0px 5px 20px var(--gray);
   display: flex;
@@ -354,35 +359,40 @@ aside header i {
   height: 100%;
 }
 
-.activity-card-1 {
-  grid-row: 2/7;
-}
+@media screen and (min-width: 1550px) {
+  #activities header {
+    grid-column: 1 / 5;
+  }
+  .activity-card-1 {
+    grid-row: 2/7;
+    grid-column: 1/2;
+  }
 
-.activity-card-2 {
-  grid-row: 2/5;
-  grid-column: 2/3;
-}
+  .activity-card-2 {
+    grid-row: 2/5;
+    grid-column: 2/3;
+  }
 
-.activity-card-3 {
-  grid-row: 2/7;
-  grid-column: 3/4;
-}
+  .activity-card-3 {
+    grid-row: 2/7;
+    grid-column: 3/4;
+  }
 
-.activity-card-4 {
-  grid-row: 2/4;
-  grid-column: 4/5;
-}
+  .activity-card-4 {
+    grid-row: 2/4;
+    grid-column: 4/5;
+  }
 
-.activity-card-5 {
-  grid-row: 5/7;
-  grid-column: 2/3;
-}
+  .activity-card-5 {
+    grid-row: 5/7;
+    grid-column: 2/3;
+  }
 
-.activity-card-6 {
-  grid-row: 4/7;
-  grid-column: 4/5;
+  .activity-card-6 {
+    grid-row: 4/7;
+    grid-column: 4/5;
+  }
 }
-
 .activity-img {
   height: 100%;
   position: relative;
@@ -396,13 +406,13 @@ aside header i {
   border-radius: 1rem 1rem 0 0;
 }
 
-.activities p {
+#activities p {
   font-weight: 700;
   padding: 1.5rem;
   font-size: 1.2rem;
 }
 
-.activities a:hover {
+#activities a:hover {
   transition: 0.5s;
   transform: scale(1.05);
 }
@@ -424,6 +434,6 @@ footer div {
   font-size: 1.2rem;
 }
 
-footer div h3{
+footer div h3 {
   padding-bottom: 1rem;
 }

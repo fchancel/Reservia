@@ -1,0 +1,60 @@
+@media screen and (max-width: 1550px) {
+  body > header {
+    margin: 0 2rem 0 2rem;
+  }
+
+  main {
+    margin: 0 2rem 0 2rem;
+  }
+
+  /* ******************** */
+  /*         HOSTINGS     */
+  /* ******************** */
+  #hostings {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .hosting-main {
+    grid-row: 2;
+  }
+
+  .hosting-main-card img {
+    height: 10rem;
+  }
+
+  aside {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 2rem;
+  }
+
+  aside header {
+    grid-column: 1/-1;
+  }
+
+  /* ******************** */
+  /*     ACTIVITIES       */
+  /* ******************** */
+
+  #activities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 20rem 20rem;
+  }
+
+  #activities header {
+    grid-column: 1/-1;
+  }
+
+  /* ******************** */
+  /*         FOOTER       */
+  /* ******************** */
+
+  footer div {
+    font-size: 1rem;
+  }
+}

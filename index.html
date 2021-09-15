@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1550px)"
+      href="style-xl.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 992px)"
+      href="style-l.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="style-m.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,8 +41,8 @@
         alt="Reservia - Recherche d'hébergement"
       />
       <nav>
-        <a href="#">Hébergements</a>
-        <a href="#">Activités</a>
+        <a href="#hostings">Hébergements</a>
+        <a href="#activities">Activités</a>
       </nav>
       <a href="#">S'inscrire</a>
     </header>
@@ -44,7 +59,9 @@
             placeholder="Marseille, France"
             value="Marseille, France"
           />
-          <button type="submit">Rechercher</button>
+          <button type="submit">
+            <span>Rechercher</span><i class="fas fa-search"></i>
+          </button>
         </form>
 
         <div class="option-filter">
@@ -72,7 +89,7 @@
           <p>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
       </section>
-      <section class="hostings">
+      <section id="hostings">
         <div class="hosting-main">
           <header>
             <h2>Hébergements à Marseille</h2>
@@ -259,7 +276,7 @@
           </a>
         </aside>
       </section>
-      <section class="activities">
+      <section id="activities">
         <header>
           <h2>Activités à Marseille</h2>
         </header>

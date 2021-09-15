@@ -1,0 +1,147 @@
+@media screen and (max-width: 768px) {
+  body > header {
+    margin: 0;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  main .search {
+    margin: 0 1rem 0 1rem;
+  }
+
+  /* ******************** */
+  /*         HEADER       */
+  /* ******************** */
+
+  body > header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding-top: 2rem;
+  }
+
+  header nav {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  header nav a {
+    border-bottom: 3px solid var(--gray-light);
+    width: 100%;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  header nav a:hover {
+    color: var(--blue);
+    border-bottom: 3px solid var(--blue);
+  }
+
+  body > header > a {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    justify-self: end;
+    align-self: center;
+    padding-right: 1rem;
+  }
+
+  body > header img {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    padding-left: 1rem;
+  }
+
+  /* ******************** */
+  /*         HOSTINGS     */
+  /* ******************** */
+
+  .search form input {
+    width: 100%;
+    min-width: 100px;
+  }
+
+  .search form button i {
+    display: inline;
+  }
+
+  .search form button span {
+    display: None;
+  }
+
+  .option-filter > p {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  #hostings {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .hosting-main {
+    background-color: white;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hosting-main-card img {
+    height: 8rem;
+  }
+
+  aside {
+    border-radius: 0;
+    grid-row: 1;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    column-gap: 2rem;
+  }
+
+  aside header {
+    grid-column: 1/-1;
+  }
+
+  .aside-img {
+    margin-bottom: 6rem;
+  }
+
+  /* ******************** */
+  /*     ACTIVITIES       */
+  /* ******************** */
+
+  #activities {
+    margin: 0 2rem 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+  }
+
+  #activities header {
+    grid-column: 1/-1;
+  }
+
+  /* ******************** */
+  /*         FOOTER       */
+  /* ******************** */
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 4rem 1rem 4rem;
+  }
+
+  footer div {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  footer div h3 {
+    padding-top: 2rem;
+  }
+}
