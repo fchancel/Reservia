@@ -2,7 +2,7 @@
 
 Second project of the web developer course at OpenClassrooms. The objective is to integrate the model of a vacation planning site called "Reservia" (see image below).
 
-![](https://gitlab.com/fchancel/oc-reservia/-/raw/main/assets/mockup/desktop.png)
+![](https://raw.githubusercontent.com/fchancel/Reservia/main/assets/mockup/desktop.png)
 
 ## Terms of reference
 
